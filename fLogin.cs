@@ -1,5 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace QLBH
@@ -23,26 +22,43 @@ namespace QLBH
                 lblMessage.Text = "Bạn phải nhập mật khẩu?";
                 txtPassword.Focus();
             }
-            else if (txtUsername.Text != "u")
-            {
-                lblMessage.Text = "Bạn đã nhập sai tên người dùng?";
-                txtUsername.Focus();
-            }
-            else if (txtPassword.Text != "1")
-            {
-                lblMessage.Text = "Bạn đã nhập sai mật khẩu?";
-                txtPassword.Focus();
-            }
             else
             {
-                Utility.Username = txtUsername.Text;
-                DialogResult = DialogResult.OK;
+                try
+                {
+                    using (var db = new EFDbContext())
+                    {
+                        Utility.Employee = db.Employees.SingleOrDefault(e =>
+                        e.Email == txtUsername.Text && e.Password == txtPassword.Text);
+                        if (Utility.Employee == null) //Nếu đăng nhập thất bại
+                        {
+                            lblMessage.Text = "Sai tên người dùng hoặc mật khẩu";
+                            txtUsername.Focus();
+                        }
+                        else
+                            DialogResult = DialogResult.OK; //đóng form
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblMessage.Text = "Lỗi";
+                }
             }
         }
-
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            txtUsername.Text = ""; 
+            txtPassword.Text = "";
+            lblMessage.Text = "";
+        }
         private void btCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void liForget_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

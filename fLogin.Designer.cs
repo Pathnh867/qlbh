@@ -130,7 +130,9 @@
             Controls.Add(labelLogin);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "fLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Đăng Nhập";
+            Load += fLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }

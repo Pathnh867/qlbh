@@ -32,7 +32,6 @@
             employeeToolStripMenuItem = new ToolStripMenuItem();
             manageEmployeeToolStripMenuItem = new ToolStripMenuItem();
             newEmployeeToolStripMenuItem = new ToolStripMenuItem();
-            employeeToolStripMenuItem1 = new ToolStripMenuItem();
             customerToolStripMenuItem = new ToolStripMenuItem();
             manageCustomerToolStripMenuItem = new ToolStripMenuItem();
             newCustomerToolStripMenuItem = new ToolStripMenuItem();
@@ -62,8 +61,6 @@
             orderDetailToolStripMenuItem1 = new ToolStripMenuItem();
             orderDetailListToolStripMenuItem = new ToolStripMenuItem();
             orderStatisticsToolStripMenuItem = new ToolStripMenuItem();
-            reportToolStripMenuItem1 = new ToolStripMenuItem();
-            orderToolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,13 +70,13 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { employeeToolStripMenuItem, customerToolStripMenuItem, categoryToolStripMenuItem, productToolStripMenuItem, orderToolStripMenuItem, orderDetailToolStripMenuItem, reportToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Size = new Size(860, 28);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // employeeToolStripMenuItem
             // 
-            employeeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { manageEmployeeToolStripMenuItem, newEmployeeToolStripMenuItem, employeeToolStripMenuItem1 });
+            employeeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { manageEmployeeToolStripMenuItem, newEmployeeToolStripMenuItem });
             employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
             employeeToolStripMenuItem.Size = new Size(89, 24);
             employeeToolStripMenuItem.Text = "Nhân viên";
@@ -87,21 +84,15 @@
             // manageEmployeeToolStripMenuItem
             // 
             manageEmployeeToolStripMenuItem.Name = "manageEmployeeToolStripMenuItem";
-            manageEmployeeToolStripMenuItem.Size = new Size(209, 26);
+            manageEmployeeToolStripMenuItem.Size = new Size(224, 26);
             manageEmployeeToolStripMenuItem.Text = "Quản lý nhân viên";
             // 
             // newEmployeeToolStripMenuItem
             // 
             newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            newEmployeeToolStripMenuItem.Size = new Size(209, 26);
+            newEmployeeToolStripMenuItem.Size = new Size(224, 26);
             newEmployeeToolStripMenuItem.Text = "Nhập nhân viên";
-            // 
-            // employeeToolStripMenuItem1
-            // 
-            employeeToolStripMenuItem1.Enabled = false;
-            employeeToolStripMenuItem1.Name = "employeeToolStripMenuItem1";
-            employeeToolStripMenuItem1.Size = new Size(209, 26);
-            employeeToolStripMenuItem1.Text = "Employee";
+            newEmployeeToolStripMenuItem.Click += newEmployeeToolStripMenuItem_Click;
             // 
             // customerToolStripMenuItem
             // 
@@ -113,14 +104,14 @@
             // manageCustomerToolStripMenuItem
             // 
             manageCustomerToolStripMenuItem.Name = "manageCustomerToolStripMenuItem";
-            manageCustomerToolStripMenuItem.Size = new Size(224, 26);
+            manageCustomerToolStripMenuItem.Size = new Size(221, 26);
             manageCustomerToolStripMenuItem.Text = "Quản lý khách hàng";
             manageCustomerToolStripMenuItem.Click += manageCustomerToolStripMenuItem_Click;
             // 
             // newCustomerToolStripMenuItem
             // 
             newCustomerToolStripMenuItem.Name = "newCustomerToolStripMenuItem";
-            newCustomerToolStripMenuItem.Size = new Size(224, 26);
+            newCustomerToolStripMenuItem.Size = new Size(221, 26);
             newCustomerToolStripMenuItem.Text = "Nhập khách hàng";
             // 
             // categoryToolStripMenuItem
@@ -207,7 +198,7 @@
             // 
             // reportToolStripMenuItem
             // 
-            reportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { productToolStripMenuItem2, customerToolStripMenuItem1, orderToolStripMenuItem2, reportToolStripMenuItem1, orderToolStripMenuItem1 });
+            reportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { productToolStripMenuItem2, customerToolStripMenuItem1, orderToolStripMenuItem2 });
             reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             reportToolStripMenuItem.Size = new Size(77, 24);
             reportToolStripMenuItem.Text = "Báo cáo";
@@ -287,29 +278,16 @@
             orderStatisticsToolStripMenuItem.Size = new Size(276, 26);
             orderStatisticsToolStripMenuItem.Text = "Thống kê đơn hàng";
             // 
-            // reportToolStripMenuItem1
-            // 
-            reportToolStripMenuItem1.Name = "reportToolStripMenuItem1";
-            reportToolStripMenuItem1.Size = new Size(169, 26);
-            reportToolStripMenuItem1.Text = "Report";
-            // 
-            // orderToolStripMenuItem1
-            // 
-            orderToolStripMenuItem1.Name = "orderToolStripMenuItem1";
-            orderToolStripMenuItem1.ShowShortcutKeys = false;
-            orderToolStripMenuItem1.Size = new Size(169, 26);
-            orderToolStripMenuItem1.Text = "Order";
-            orderToolStripMenuItem1.Click += orderToolStripMenuItem1_Click;
-            // 
             // fMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(860, 503);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "fMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản trị";
             WindowState = FormWindowState.Maximized;
             Load += fMain_Load;
@@ -325,7 +303,6 @@
         private ToolStripMenuItem employeeToolStripMenuItem;
         private ToolStripMenuItem manageEmployeeToolStripMenuItem;
         private ToolStripMenuItem newEmployeeToolStripMenuItem;
-        private ToolStripMenuItem employeeToolStripMenuItem1;
         private ToolStripMenuItem customerToolStripMenuItem;
         private ToolStripMenuItem manageCustomerToolStripMenuItem;
         private ToolStripMenuItem newCustomerToolStripMenuItem;
@@ -347,7 +324,6 @@
         private ToolStripMenuItem listProductsToolStripMenuItem;
         private ToolStripMenuItem productByCategoryToolStripMenuItem;
         private ToolStripMenuItem customerToolStripMenuItem1;
-        private ToolStripMenuItem orderToolStripMenuItem1;
         private ToolStripMenuItem productStatisticsToolStripMenuItem;
         private ToolStripMenuItem listCustomersToolStripMenuItem;
         private ToolStripMenuItem customerStatisticsToolStripMenuItem;
@@ -356,6 +332,5 @@
         private ToolStripMenuItem orderDetailToolStripMenuItem1;
         private ToolStripMenuItem orderDetailListToolStripMenuItem;
         private ToolStripMenuItem orderStatisticsToolStripMenuItem;
-        private ToolStripMenuItem reportToolStripMenuItem1;
     }
 }
