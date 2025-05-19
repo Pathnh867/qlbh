@@ -1,9 +1,4 @@
 ﻿using QLBH.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLBH
 {
@@ -11,6 +6,8 @@ namespace QLBH
     {
         public static string Username = "";
         public static Employee? Employee { get; set; }
+        static public string ImagePath =
+            Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\Images\";
 
         public static bool IsOpeningForm(string formname)
         {

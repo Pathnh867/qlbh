@@ -124,3 +124,5 @@ C:\Users\ADMIN\source\repos\QLBH\QLBH\obj\Debug\net8.0-windows\QLBH.fManageCusto
 C:\Users\ADMIN\source\repos\QLBH\QLBH\bin\Debug\net8.0-windows\QLBH.dll.config
 C:\Users\ADMIN\source\repos\QLBH\QLBH\obj\Debug\net8.0-windows\QLBH.fNewCustomer.resources
 C:\Users\ADMIN\source\repos\QLBH\QLBH\obj\Debug\net8.0-windows\QLBH.fEditCustomer.resources
+C:\Users\ADMIN\source\repos\QLBH\QLBH\obj\Debug\net8.0-windows\QLBH.fManageProduct.resources
+C:\Users\ADMIN\source\repos\QLBH\QLBH\obj\Debug\net8.0-windows\QLBH.sourcelink.json
