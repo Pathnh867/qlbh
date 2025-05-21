@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             lblTitle = new Label();
             lblCategory = new Label();
             cbCategories = new ComboBox();
@@ -162,12 +162,13 @@
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ProductID, ProductName, Quantity, Price, MarketPrice, Description, ImageFile, Status, Edit, Delete });
-            dataGridView1.Location = new Point(41, 228);
+            dataGridView1.Location = new Point(0, 228);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(910, 522);
+            dataGridView1.Size = new Size(1000, 522);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // ProductID
             // 
@@ -191,8 +192,8 @@
             // 
             Quantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Quantity.DataPropertyName = "Quantity";
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
-            Quantity.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Quantity.DefaultCellStyle = dataGridViewCellStyle4;
             Quantity.HeaderText = "Quantity";
             Quantity.MinimumWidth = 6;
             Quantity.Name = "Quantity";
@@ -202,8 +203,8 @@
             // 
             Price.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Price.DataPropertyName = "Price";
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
-            Price.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Price.DefaultCellStyle = dataGridViewCellStyle5;
             Price.HeaderText = "Price";
             Price.MinimumWidth = 6;
             Price.Name = "Price";
@@ -213,8 +214,8 @@
             // 
             MarketPrice.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             MarketPrice.DataPropertyName = "MarketPrice";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
-            MarketPrice.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleRight;
+            MarketPrice.DefaultCellStyle = dataGridViewCellStyle6;
             MarketPrice.HeaderText = "MarketPrice";
             MarketPrice.MinimumWidth = 6;
             MarketPrice.Name = "MarketPrice";

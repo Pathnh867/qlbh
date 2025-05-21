@@ -82,6 +82,7 @@
             txtName.Name = "txtName";
             txtName.Size = new Size(250, 27);
             txtName.TabIndex = 0;
+            txtName.Validating += txtName_Validating;
             // 
             // lblCategory
             // 
@@ -101,6 +102,7 @@
             cbCategories.Name = "cbCategories";
             cbCategories.Size = new Size(200, 28);
             cbCategories.TabIndex = 1;
+            cbCategories.Validating += cbCategories_Validating;
             // 
             // ckStatus
             // 
@@ -133,6 +135,7 @@
             mQuantity.Name = "mQuantity";
             mQuantity.Size = new Size(150, 27);
             mQuantity.TabIndex = 3;
+            mQuantity.TypeValidationCompleted += mQuantity_TypeValidationCompleted;
             // 
             // lblPrice
             // 
@@ -151,6 +154,7 @@
             mPrice.Name = "mPrice";
             mPrice.Size = new Size(150, 27);
             mPrice.TabIndex = 4;
+            mPrice.TypeValidationCompleted += mPrice_TypeValidationCompleted;
             // 
             // lblMarketPrice
             // 
@@ -169,6 +173,7 @@
             mMarketPrice.Name = "mMarketPrice";
             mMarketPrice.Size = new Size(150, 27);
             mMarketPrice.TabIndex = 5;
+            mMarketPrice.TypeValidationCompleted += mMarketPrice_TypeValidationCompleted;
             // 
             // lblDescription
             // 
@@ -206,6 +211,7 @@
             txtImageFile.Name = "txtImageFile";
             txtImageFile.Size = new Size(300, 27);
             txtImageFile.TabIndex = 7;
+            txtImageFile.Validating += txtImageFile_Validating;
             // 
             // btBrowse
             // 
