@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             lblTitle = new Label();
             lblCategory = new Label();
             cbCategories = new ComboBox();
@@ -61,7 +61,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
             lblTitle.ForeColor = Color.DarkRed;
-            lblTitle.Location = new Point(500, 30);
+            lblTitle.Location = new Point(305, 18);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(329, 36);
             lblTitle.TabIndex = 0;
@@ -84,6 +84,7 @@
             cbCategories.Name = "cbCategories";
             cbCategories.Size = new Size(200, 28);
             cbCategories.TabIndex = 0;
+            cbCategories.SelectedIndexChanged += cbCategories_SelectedIndexChanged;
             // 
             // btNew
             // 
@@ -93,6 +94,7 @@
             btNew.TabIndex = 5;
             btNew.Text = "Nhập mới";
             btNew.UseVisualStyleBackColor = true;
+            btNew.Click += btNew_Click;
             // 
             // lblNumOfProduct
             // 
@@ -106,7 +108,7 @@
             // lblProductName
             // 
             lblProductName.AutoSize = true;
-            lblProductName.Location = new Point(600, 80);
+            lblProductName.Location = new Point(582, 80);
             lblProductName.Name = "lblProductName";
             lblProductName.Size = new Size(103, 20);
             lblProductName.TabIndex = 7;
@@ -114,19 +116,20 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(710, 77);
+            txtName.Location = new Point(692, 77);
             txtName.Name = "txtName";
             txtName.Size = new Size(200, 27);
             txtName.TabIndex = 2;
             // 
             // btFind
             // 
-            btFind.Location = new Point(920, 75);
+            btFind.Location = new Point(902, 75);
             btFind.Name = "btFind";
             btFind.Size = new Size(60, 27);
             btFind.TabIndex = 3;
             btFind.Text = "Tìm";
             btFind.UseVisualStyleBackColor = true;
+            btFind.Click += btFind_Click;
             // 
             // ckCategory
             // 
@@ -134,7 +137,7 @@
             ckCategory.CheckAlign = ContentAlignment.MiddleRight;
             ckCategory.Checked = true;
             ckCategory.CheckState = CheckState.Checked;
-            ckCategory.Location = new Point(720, 110);
+            ckCategory.Location = new Point(692, 110);
             ckCategory.Name = "ckCategory";
             ckCategory.Size = new Size(231, 24);
             ckCategory.TabIndex = 4;
@@ -164,6 +167,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(910, 522);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // ProductID
             // 
@@ -187,8 +191,8 @@
             // 
             Quantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Quantity.DataPropertyName = "Quantity";
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleRight;
-            Quantity.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Quantity.DefaultCellStyle = dataGridViewCellStyle1;
             Quantity.HeaderText = "Quantity";
             Quantity.MinimumWidth = 6;
             Quantity.Name = "Quantity";
@@ -198,8 +202,8 @@
             // 
             Price.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Price.DataPropertyName = "Price";
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleRight;
-            Price.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Price.DefaultCellStyle = dataGridViewCellStyle2;
             Price.HeaderText = "Price";
             Price.MinimumWidth = 6;
             Price.Name = "Price";
@@ -209,8 +213,8 @@
             // 
             MarketPrice.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             MarketPrice.DataPropertyName = "MarketPrice";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleRight;
-            MarketPrice.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
+            MarketPrice.DefaultCellStyle = dataGridViewCellStyle3;
             MarketPrice.HeaderText = "MarketPrice";
             MarketPrice.MinimumWidth = 6;
             MarketPrice.Name = "MarketPrice";
@@ -285,7 +289,8 @@
             Name = "fManageProduct";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản lý Sản phẩm";
-            WindowState = FormWindowState.Maximized;
+            Activated += fManageProduct_Activated;
+            Load += fManageProduct_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

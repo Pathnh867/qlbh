@@ -91,5 +91,15 @@ namespace QLBH
                 f.Show();
             }
         }
+
+        private void productToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fManageProduct f = new fManageProduct();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

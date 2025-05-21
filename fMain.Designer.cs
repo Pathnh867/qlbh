@@ -84,13 +84,13 @@
             // manageEmployeeToolStripMenuItem
             // 
             manageEmployeeToolStripMenuItem.Name = "manageEmployeeToolStripMenuItem";
-            manageEmployeeToolStripMenuItem.Size = new Size(224, 26);
+            manageEmployeeToolStripMenuItem.Size = new Size(209, 26);
             manageEmployeeToolStripMenuItem.Text = "Quản lý nhân viên";
             // 
             // newEmployeeToolStripMenuItem
             // 
             newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            newEmployeeToolStripMenuItem.Size = new Size(224, 26);
+            newEmployeeToolStripMenuItem.Size = new Size(209, 26);
             newEmployeeToolStripMenuItem.Text = "Nhập nhân viên";
             newEmployeeToolStripMenuItem.Click += newEmployeeToolStripMenuItem_Click;
             // 
@@ -104,14 +104,14 @@
             // manageCustomerToolStripMenuItem
             // 
             manageCustomerToolStripMenuItem.Name = "manageCustomerToolStripMenuItem";
-            manageCustomerToolStripMenuItem.Size = new Size(221, 26);
+            manageCustomerToolStripMenuItem.Size = new Size(224, 26);
             manageCustomerToolStripMenuItem.Text = "Quản lý khách hàng";
             manageCustomerToolStripMenuItem.Click += manageCustomerToolStripMenuItem_Click;
             // 
             // newCustomerToolStripMenuItem
             // 
             newCustomerToolStripMenuItem.Name = "newCustomerToolStripMenuItem";
-            newCustomerToolStripMenuItem.Size = new Size(221, 26);
+            newCustomerToolStripMenuItem.Size = new Size(224, 26);
             newCustomerToolStripMenuItem.Text = "Nhập khách hàng";
             // 
             // categoryToolStripMenuItem
@@ -143,13 +143,14 @@
             // productToolStripMenuItem1
             // 
             productToolStripMenuItem1.Name = "productToolStripMenuItem1";
-            productToolStripMenuItem1.Size = new Size(210, 26);
+            productToolStripMenuItem1.Size = new Size(224, 26);
             productToolStripMenuItem1.Text = "Quản lý sản phẩm";
+            productToolStripMenuItem1.Click += productToolStripMenuItem1_Click;
             // 
             // newProductToolStripMenuItem
             // 
             newProductToolStripMenuItem.Name = "newProductToolStripMenuItem";
-            newProductToolStripMenuItem.Size = new Size(210, 26);
+            newProductToolStripMenuItem.Size = new Size(224, 26);
             newProductToolStripMenuItem.Text = "Nhập sản phẩm";
             // 
             // orderToolStripMenuItem
